@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'yiisoft/yii2-imagine',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-dev',
+        'version' => 'dev-dev',
+        'reference' => '5bd09ab9b41a5a3304bd950a5ddd9e92bd237cf8',
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'yiisoft/yii2-imagine' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-dev',
+            'version' => 'dev-dev',
+            'reference' => '5bd09ab9b41a5a3304bd950a5ddd9e92bd237cf8',
             'type' => 'yii2-extension',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
