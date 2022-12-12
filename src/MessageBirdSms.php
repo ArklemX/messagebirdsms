@@ -1,17 +1,21 @@
 <?php
 
-namespace MessageBirdSms;
+namespace arklem\messagebirdsms\src;
 
+use JsonException;
 use MessageBird\Client;
+use MessageBird\Exceptions\AuthenticateException;
+use MessageBird\Exceptions\BalanceException;
+use MessageBird\Exceptions\HttpException;
 use MessageBird\Objects\Message;
 
 class MessageBirdSms
 {
 
-    private $accessKey;
-    private $originator;
-    private $receiver;
-    private $message;
+    private string $accessKey;
+    private string $originator;
+    private string $receiver;
+    private string $message;
 
     /**
      * Initialise our class at the instantiation.
@@ -29,93 +33,93 @@ class MessageBirdSms
     }
 
     /**
-     *
-     *  Send a $message to a $recipient ( a destinator ).
-     *
+     * @param array $receivers
+     * @param $message
      * @return void
-     * @throws \JsonException
-     * @throws \MessageBird\Exceptions\AuthenticateException
-     * @throws \MessageBird\Exceptions\BalanceException
-     * @throws \MessageBird\Exceptions\HttpException
+     * @throws AuthenticateException
+     * @throws BalanceException
+     * @throws HttpException
+     * @throws JsonException
      */
-    public function send($receiver, $message)
+    public function send(array $receivers, $message)
     {
-        $MessageBird = new Client($this->getAccessKey(). '');
+        $MessageBird = new Client($this->getAccessKey());
         $Message = new Message();
-        $Message->originator = $this->getOriginator(). '';
-        $Message->recipients = array(RECIPIENT);
-        $Message->body = 'This is a test message';
+        $Message->originator = $this->getOriginator();
+        $Message->recipients = array($receivers);
+        $Message->body = $message;
 
         $MessageBird->messages->create($Message);
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getAccessKey()
+    public function getAccessKey(): string
     {
         return $this->accessKey;
     }
 
     /**
-     * @param mixed $accessKey
+     * @param string $accessKey
      * @return MessageBirdSms
      */
-    public function setAccessKey($accessKey)
+    public function setAccessKey(string $accessKey): MessageBirdSms
     {
         $this->accessKey = $accessKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getOriginator()
+    public function getOriginator(): string
     {
         return $this->originator;
     }
 
     /**
-     * @param mixed $originator
+     * @param string $originator
      * @return MessageBirdSms
      */
-    public function setOriginator($originator)
+    public function setOriginator(string $originator): MessageBirdSms
     {
         $this->originator = $originator;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getReceiver()
+    public function getReceiver(): string
     {
         return $this->receiver;
     }
 
     /**
-     * @param mixed $receiver
+     * @param string $receiver
      * @return MessageBirdSms
      */
-    public function setReceiver($receiver)
+    public function setReceiver(string $receiver): MessageBirdSms
     {
         $this->receiver = $receiver;
         return $this;
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMessage()
+    public function getMessage(): string
     {
         return $this->message;
     }
 
     /**
-     * @param mixed $message
+     * @param string $message
      * @return MessageBirdSms
      */
-    public function setMessage($message)
+    public function setMessage(string $message): MessageBirdSms
     {
         $this->message = $message;
         return $this;
