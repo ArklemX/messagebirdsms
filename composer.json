@@ -1,8 +1,6 @@
 {
   "name": "arklem/messagebirdsms",
-
   "type": "yii2-extension",
-
   "description": "The Message Bird API integration for the Yii framework",
   "license": "BSD-3-Clause",
 
@@ -13,7 +11,6 @@
   ],
 
   "require": {
-    "php": ">=7.4",
     "messagebird/php-rest-api": "~3.1.2"
   },
   "require-dev": {
@@ -22,7 +19,7 @@
 
   "autoload": {
     "psr-4": {
-      "karbura\\messagebirdsms\\": ""
+      "arklem\\messagebirdsms\\": ""
     }
   },
   "extra": {
