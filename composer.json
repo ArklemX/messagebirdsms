@@ -1,0 +1,24 @@
+{
+  "name": "yiisoft/yii2-imagine",
+
+  "type": "yii2-extension",
+
+  "description": "The Message Bird API integration for the Yii framework",
+  "license": "BSD-3-Clause",
+
+  "authors": [
+    {
+      "name": "Avaika Nametissa Jean Marcel"
+    }
+  ],
+
+  "require": {
+    "messagebird/php-rest-api": "v3.1.2"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "karbura\\messagebirdsms\\": ""
+    }
+  }
+}
