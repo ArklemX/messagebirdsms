@@ -24,5 +24,10 @@
     "psr-4": {
       "karbura\\messagebirdsms\\": ""
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev": "1.0-dev"
+    }
   }
 }

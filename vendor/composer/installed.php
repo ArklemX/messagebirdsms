@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'name' => 'yiisoft/yii2-imagine',
+        'name' => 'arklem/messagebirdsms',
         'pretty_version' => 'dev-dev',
         'version' => 'dev-dev',
-        'reference' => '5bd09ab9b41a5a3304bd950a5ddd9e92bd237cf8',
+        'reference' => '858b1a90ded8508f2885ff87767c71b70422eeca',
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'arklem/messagebirdsms' => array(
+            'pretty_version' => 'dev-dev',
+            'version' => 'dev-dev',
+            'reference' => '858b1a90ded8508f2885ff87767c71b70422eeca',
+            'type' => 'yii2-extension',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'firebase/php-jwt' => array(
             'pretty_version' => 'v6.3.1',
             'version' => '6.3.1.0',
@@ -28,14 +37,16 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'yiisoft/yii2-imagine' => array(
-            'pretty_version' => 'dev-dev',
-            'version' => 'dev-dev',
-            'reference' => '5bd09ab9b41a5a3304bd950a5ddd9e92bd237cf8',
-            'type' => 'yii2-extension',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
+        'roave/security-advisories' => array(
+            'pretty_version' => 'dev-latest',
+            'version' => 'dev-latest',
+            'reference' => 'cd9af30140f6f34d9132986f4c6f04cf5e90cdc8',
+            'type' => 'metapackage',
+            'install_path' => NULL,
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => true,
         ),
     ),
 );
